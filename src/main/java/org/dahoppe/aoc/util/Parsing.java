@@ -2,6 +2,7 @@ package org.dahoppe.aoc.util;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.function.Function;
 import java.util.stream.Stream;
 
 public class Parsing {
@@ -16,6 +17,12 @@ public class Parsing {
 
     public static Stream<String> split(String stringToSplit, String regexToSplitOn) {
         return Arrays.stream(stringToSplit.split(regexToSplitOn));
+    }
+
+    public static <T> List<T> parseLineByLine(String input, Function<String, T> parseLine) {
+        return splitOnNewLine(input)
+                .map(parseLine)
+                .toList();
     }
 
     public static List<Integer> treatAsUnseparatedIntegers(String input) {
