@@ -3,8 +3,6 @@ package org.dahoppe.aoc.solutions.day2;
 import com.google.common.base.Splitter;
 import com.google.common.collect.Lists;
 import org.dahoppe.aoc.util.Parsing;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.util.List;
 import java.util.function.Predicate;
@@ -12,8 +10,6 @@ import java.util.stream.Collectors;
 import java.util.stream.LongStream;
 
 class Day2 {
-
-    private static final Logger log = LoggerFactory.getLogger(Day2.class);
 
     static boolean isInvalidPartA(String id) {
         return
