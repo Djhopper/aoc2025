@@ -2,7 +2,7 @@ package org.dahoppe.aoc.solutions.day1;
 
 import java.util.List;
 
-public class Day1 {
+class Day1 {
 
     enum Direction {
         RIGHT, LEFT;
@@ -12,7 +12,7 @@ public class Day1 {
         private final Direction direction;
         private final Integer distance;
 
-        public Rotation(String inputStringLine) {
+        Rotation(String inputStringLine) {
             if (inputStringLine.startsWith("L")) {
                 direction = Direction.LEFT;
             } else {
